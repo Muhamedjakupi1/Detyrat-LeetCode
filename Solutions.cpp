@@ -1,3 +1,10 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
 //How Many Numbers Are Smaller Than the Current Number
 class Array1 {
 public:
@@ -390,3 +397,296 @@ public:
         return ans;
     }
 };
+
+
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int choice;
+    cout << "Choose a function to test (1-20): ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1: {
+            Array1 array1;
+            int size;
+            cout << "Enter the size of the vector: ";
+            cin >> size;
+            vector<int> nums(size);
+            cout << "Enter the elements of the vector: ";
+            for (int i = 0; i < size; ++i) {
+                cin >> nums[i];
+            }
+            vector<int> result = array1.smallerNumbersThanCurrent(nums);
+            cout << "Array1 Result: ";
+            for (int num : result) {
+                cout << num << " ";
+            }
+            cout << endl;
+            break;
+        }
+        case 2: {
+            Array2 array2;
+            int size;
+            cout << "Enter the size of the vector: ";
+            cin >> size;
+            vector<int> nums(size);
+            cout << "Enter the elements of the vector: ";
+            for (int i = 0; i < size; ++i) {
+                cin >> nums[i];
+            }
+            int result = array2.numIdenticalPairs(nums);
+            cout << "Array2 Result: " << result << endl;
+            break;
+        }
+        case 3: {
+            Array3 array3;
+            int size;
+            cout << "Enter the number of operations: ";
+            cin >> size;
+            vector<string> operations(size);
+            cout << "Enter the operations (--X, X--, ++X, X++): ";
+            for (int i = 0; i < size; ++i) {
+                cin >> operations[i];
+            }
+            int result = array3.finalValueAfterOperations(operations);
+            cout << "Array3 Result: " << result << endl;
+            break;
+        }
+        case 4: {
+            Array4 array4;
+            int size;
+            cout << "Enter the size of the vector: ";
+            cin >> size;
+            vector<int> nums(size);
+            cout << "Enter the elements of the vector: ";
+            for (int i = 0; i < size; ++i) {
+                cin >> nums[i];
+            }
+            vector<int> result = array4.getConcatenation(nums);
+            cout << "Array4 Result: ";
+            for (int num : result) {
+                cout << num << " ";
+            }
+            cout << endl;
+            break;
+        }
+        case 5: {
+            Array5 array5;
+            int size;
+            cout << "Enter the number of sentences: ";
+            cin >> size;
+            cin.ignore();  // Clear the newline character from the buffer
+            vector<string> sentences(size);
+            cout << "Enter the sentences: ";
+            for (int i = 0; i < size; ++i) {
+                getline(cin, sentences[i]);
+            }
+            int result = array5.mostWordsFound(sentences);
+            cout << "Array5 Result: " << result << endl;
+            break;
+        }
+        case 6: {
+            String1 string1;
+            string jewels, stones;
+            cout << "Enter the Jewels string: ";
+            cin >> jewels;
+            cout << "Enter the Stones string: ";
+            cin >> stones;
+            int result = string1.numJewelsInStones(jewels, stones);
+            cout << "String1 Result: " << result << endl;
+            break;
+        }
+                case 7: {
+            String2 string2;
+            vector<string> word1, word2;
+            int size1, size2;
+
+            cout << "Enter the size of word1 array: ";
+            cin >> size1;
+            word1.resize(size1);
+            cout << "Enter the elements of word1 array: ";
+            for (int i = 0; i < size1; ++i) {
+                cin >> word1[i];
+            }
+
+            cout << "Enter the size of word2 array: ";
+            cin >> size2;
+            word2.resize(size2);
+            cout << "Enter the elements of word2 array: ";
+            for (int i = 0; i < size2; ++i) {
+                cin >> word2[i];
+            }
+
+            bool result = string2.arrayStringsAreEqual(word1, word2);
+            cout << "String2 Result: " << (result ? "true" : "false") << endl;
+            break;
+        }
+        case 8: {
+            String3 string3;
+            string s;
+            cout << "Enter the string: ";
+            cin >> s;
+            string result = string3.interpret(s);
+            cout << "String3 Result: " << result << endl;
+            break;
+        }
+        case 9: {
+            String4 string4;
+            string s;
+            cout << "Enter the string: ";
+            cin >> s;
+            int result = string4.balancedStringSplit(s);
+            cout << "String4 Result: " << result << endl;
+            break;
+        }
+        case 10: {
+            String5 string5;
+            string address;
+            cout << "Enter the IP address: ";
+            cin >> address;
+            string result = string5.defangIPaddr(address);
+            cout << "String5 Result: " << result << endl;
+            break;
+        }
+        case 11: {
+            Math1 math1;
+            double celsius;
+            cout << "Enter the temperature in Celsius: ";
+            cin >> celsius;
+            vector<double> result = math1.convertTemperature(celsius);
+            cout << "Math1 Result (Kelvin): " << result[0] << endl;
+            cout << "Math1 Result (Fahrenheit): " << result[1] << endl;
+            break;
+        }
+        case 12: {
+            Math2 math2;
+            int n, m;
+            cout << "Enter the values of n and m: ";
+            cin >> n >> m;
+            int result = math2.differenceOfSums(n, m);
+            cout << "Math2 Result: " << result << endl;
+            break;
+        }
+        case 13: {
+            Math3 math3;
+            int num;
+            cout << "Enter the number: ";
+            cin >> num;
+            int result = math3.smallestEvenMultiple(num);
+            cout << "Math3 Result: " << result << endl;
+            break;
+        }
+        case 14: {
+            Math4 math4;
+            int num1, num2;
+            cout << "Enter two integers: ";
+            cin >> num1 >> num2;
+            int result = math4.sum(num1, num2);
+            cout << "Math4 Result: " << result << endl;
+            break;
+        }
+        case 15: {
+            Math5 math5;
+            int numri;
+            cout << "Enter the number: ";
+            cin >> numri;
+            int result = math5.sumOfMultiples(numri);
+            cout << "Math5 Result: " << result << endl;
+            break;
+        }
+        case 16: {
+            Matrix1 matrix1;
+            int m, n;
+            cout << "Enter the number of rows and columns: ";
+            cin >> m >> n;
+            vector<vector<int>> matrica(m, vector<int>(n));
+            cout << "Enter the elements of the matrix: ";
+            for (int i = 0; i < m; ++i) {
+                for (int j = 0; j < n; ++j) {
+                    cin >> matrica[i][j];
+                }
+            }
+            int result = matrix1.diagonalSum(matrica);
+            cout << "Matrix1 Result: " << result << endl;
+            break;
+        }
+        case 17: {
+            Matrix2 matrix2;
+            int m, n;
+            cout << "Enter the number of rows and columns: ";
+            cin >> m >> n;
+            vector<vector<int>> matrica(m, vector<int>(n));
+            cout << "Enter the elements of the matrix: ";
+            for (int i = 0; i < m; ++i) {
+                for (int j = 0; j < n; ++j) {
+                    cin >> matrica[i][j];
+                }
+            }
+            int result = matrix2.countNegatives(matrica);
+            cout << "Matrix2 Result: " << result << endl;
+            break;
+        }
+        case 18: {
+            Matrix3 matrix3;
+            int m, n;
+            cout << "Enter the number of rows and columns: ";
+            cin >> m >> n;
+            vector<vector<int>> matrica(m, vector<int>(n));
+            cout << "Enter the elements of the matrix: ";
+            for (int i = 0; i < m; ++i) {
+                for (int j = 0; j < n; ++j) {
+                    cin >> matrica[i][j];
+                }
+            }
+            vector<int> result = matrix3.rowAndMaximumOnes(matrica);
+            cout << "Matrix3 Result: Row " << result[0] << " has maximum ones: " << result[1] << endl;
+            break;
+        }
+        case 19: {
+            Matrix4 matrix4;
+            int m, n;
+            cout << "Enter the number of customers and banks: ";
+            cin >> m >> n;
+            vector<vector<int>> accounts(m, vector<int>(n));
+            cout << "Enter the wealth of each customer in each bank: ";
+            for (int i = 0; i < m; ++i) {
+                for (int j = 0; j < n; ++j) {
+                    cin >> accounts[i][j];
+                }
+            }
+            int result = matrix4.maximumWealth(accounts);
+            cout << "Matrix4 Result: " << result << endl;
+            break;
+        }
+        case 20: {
+            Solution solution;
+            int m, n;
+            cout << "Enter the number of rows and columns: ";
+            cin >> m >> n;
+            vector<vector<int>> matrix(m, vector<int>(n));
+            cout << "Enter the elements of the matrix: ";
+            for (int i = 0; i < m; ++i) {
+                for (int j = 0; j < n; ++j) {
+                    cin >> matrix[i][j];
+                }
+            }
+            vector<int> result = solution.luckyNumbers(matrix);
+            cout << "Solution Result: ";
+            for (int num : result) {
+                cout << num << " ";
+            }
+            cout << endl;
+            break;
+        }
+        default:
+            cout << "Invalid choice. Please choose a number between 1 and 20." << endl;
+    }
+
+    return 0;
+}
+
