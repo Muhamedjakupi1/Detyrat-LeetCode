@@ -504,7 +504,7 @@ int main() {
         cout << "Enter the Stones string: ";
         cin >> stones;
         int result = string1.numJewelsInStones(jewels, stones);
-        cout << "String Result: " << result << endl;
+        cout << "String1 Result: " << result << endl;
         break;
     }
     case 7: {
@@ -530,7 +530,7 @@ int main() {
         }
 
         bool result = string2.arrayStringsAreEqual(word1, word2);
-        cout << "String Result: " << (result ? "true" : "false") << endl;
+        cout << "String2 Result: " << (result ? "true" : "false") << endl;
         break;
     }
     case 8: {
@@ -540,7 +540,7 @@ int main() {
         cout << "Enter the string: ";
         cin >> s;
         string result = string3.interpret(s);
-        cout << "String Result: " << result << endl;
+        cout << "String3 Result: " << result << endl;
         break;
     }
     case 9: {
@@ -581,7 +581,7 @@ int main() {
         cout << "Enter the values of n and m: ";
         cin >> n >> m;
         int result = math2.differenceOfSums(n, m);
-        cout << "Math Result: " << result << endl;
+        cout << "Math2 Result: " << result << endl;
         break;
     }
     case 13: {
@@ -628,7 +628,7 @@ int main() {
             }
         }
         int result = matrix1.diagonalSum(matrica);
-        cout << "Matrix Result: " << result << endl;
+        cout << "Matrix1 Result: " << result << endl;
         break;
     }
     case 17: {
@@ -645,7 +645,7 @@ int main() {
             }
         }
         int result = matrix2.countNegatives(matrica);
-        cout << "Matrix Result: " << result << endl;
+        cout << "Matrix2 Result: " << result << endl;
         break;
     }
     case 18: {
@@ -662,7 +662,7 @@ int main() {
             }
         }
         vector<int> result = matrix3.rowAndMaximumOnes(matrica);
-        cout << "Matrix Result: Row " << result[0] << " has maximum ones: " << result[1] << endl;
+        cout << "Matrix3 Result: Row " << result[0] << " has maximum ones: " << result[1] << endl;
         break;
     }
     case 19: {
@@ -679,7 +679,7 @@ int main() {
             }
         }
         int result = matrix4.maximumWealth(accounts);
-        cout << "Matrix Result: " << result << endl;
+        cout << "Matrix4 Result: " << result << endl;
         break;
     }
     case 20: {
@@ -696,7 +696,7 @@ int main() {
             }
         }
         vector<int> result = matrix5.luckyNumbers(matrix);
-        cout << "Solution Result: ";
+        cout << "Matrix5 Result: ";
         for (int num : result) {
             cout << num << " ";
         }
