@@ -372,7 +372,7 @@ public:
 };
 
 
-//Lucky number in matrix
+//Lucky number in matrix, minimumi ne rresht dhe maksimumi ne kolone
 class Matrix5 {
 public:
     vector<int> luckyNumbers(vector<vector<int>>& matrix) {
@@ -488,7 +488,7 @@ int main() {
         cin.ignore();  // Clear the newline character from the buffer
         vector<string> sentences(size);
         cout << "Enter the sentences: ";
-        for (int i = 0; i < size; ++i) {
+        for (int i = 0; i < size; i++) {
             getline(cin, sentences[i]);
         }
         int result = array5.mostWordsFound(sentences);
@@ -504,7 +504,7 @@ int main() {
         cout << "Enter the Stones string: ";
         cin >> stones;
         int result = string1.numJewelsInStones(jewels, stones);
-        cout << "String1 Result: " << result << endl;
+        cout << "String Result: " << result << endl;
         break;
     }
     case 7: {
@@ -530,7 +530,7 @@ int main() {
         }
 
         bool result = string2.arrayStringsAreEqual(word1, word2);
-        cout << "String2 Result: " << (result ? "true" : "false") << endl;
+        cout << "String Result: " << (result ? "true" : "false") << endl;
         break;
     }
     case 8: {
@@ -540,7 +540,7 @@ int main() {
         cout << "Enter the string: ";
         cin >> s;
         string result = string3.interpret(s);
-        cout << "String3 Result: " << result << endl;
+        cout << "String Result: " << result << endl;
         break;
     }
     case 9: {
@@ -570,8 +570,8 @@ int main() {
         cout << "Enter the temperature in Celsius: ";
         cin >> celsius;
         vector<double> result = math1.convertTemperature(celsius);
-        cout << "Math1 Result (Kelvin): " << result[0] << endl;
-        cout << "Math1 Result (Fahrenheit): " << result[1] << endl;
+        cout << "Math Result (Kelvin): " << result[0] << endl;
+        cout << "Math Result (Fahrenheit): " << result[1] << endl;
         break;
     }
     case 12: {
@@ -581,7 +581,7 @@ int main() {
         cout << "Enter the values of n and m: ";
         cin >> n >> m;
         int result = math2.differenceOfSums(n, m);
-        cout << "Math2 Result: " << result << endl;
+        cout << "Math Result: " << result << endl;
         break;
     }
     case 13: {
@@ -628,7 +628,7 @@ int main() {
             }
         }
         int result = matrix1.diagonalSum(matrica);
-        cout << "Matrix1 Result: " << result << endl;
+        cout << "Matrix Result: " << result << endl;
         break;
     }
     case 17: {
@@ -645,7 +645,7 @@ int main() {
             }
         }
         int result = matrix2.countNegatives(matrica);
-        cout << "Matrix2 Result: " << result << endl;
+        cout << "Matrix Result: " << result << endl;
         break;
     }
     case 18: {
@@ -662,7 +662,7 @@ int main() {
             }
         }
         vector<int> result = matrix3.rowAndMaximumOnes(matrica);
-        cout << "Matrix3 Result: Row " << result[0] << " has maximum ones: " << result[1] << endl;
+        cout << "Matrix Result: Row " << result[0] << " has maximum ones: " << result[1] << endl;
         break;
     }
     case 19: {
@@ -679,7 +679,7 @@ int main() {
             }
         }
         int result = matrix4.maximumWealth(accounts);
-        cout << "Matrix4 Result: " << result << endl;
+        cout << "Matrix Result: " << result << endl;
         break;
     }
     case 20: {
